@@ -11,6 +11,7 @@ Pytorch implementation for reproducing COCO results in the paper [StackGAN: Text
 
 
 ### Installation
+Python (version : 2.7)
 Anaconda + Pytorch
 ```
 wget https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh
@@ -28,7 +29,7 @@ pip install pandas
 pip install torchfile
 ```
 
-1. Download our preprocessed char-CNN-RNN text embeddings for training coco. please use this command in `data/coco` directory.
+1. please use this command in `data/coco` directory. (preprocessed char-CNN-RNN text embeddings for training coco)
 
 ```
 wget http://server.itsc.kr/stackganpy/coco.zip
@@ -41,14 +42,14 @@ unzip coco_test.zip
 
   - [Optional] Follow the instructions [reedscot/icml2016](https://github.com/reedscot/icml2016) to download the pretrained char-CNN-RNN text encoders and extract text embeddings.
   
-2. Download the coco train2014 image data. please use this command in `data/coco/train` directory.
+2. please use this command in `data/coco/train` directory. (coco train2014 image data)
 ```
 wget http://images.cocodataset.org/zips/train2014.zip
 unzip train2014.zip
 mv train2014 train
 ```
 
-3. Download the pre-trained model StackGAN for coco. please use this command in `models/coco` directory.
+3. please use this command in `models/coco` directory. (pre-trained model StackGAN for coco)
 - **Our current implementation has a higher inception score(10.62±0.19) than reported in the StackGAN paper**
 ```
 wget http://server.itsc.kr/stackganpy/coco_netG_epoch_90.pth
