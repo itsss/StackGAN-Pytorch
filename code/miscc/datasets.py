@@ -103,7 +103,10 @@ class TextDataset(data.Dataset):
         elif embedding_type == 'skip-thought':
             embedding_filename = '/skip-thought-embeddings.pickle'
 
-        with open(data_dir + embedding_filename, 'rb') as f:
+        filepath = os.path.join(data_dir, embedding_filename)
+    	filepath = '../data/coco/train' + filepath
+    	#with open(data_dir + embedding_filename, 'rb') as f:
+    	with open(filepath) as f:
             embeddings = pickle.load(f)
             embeddings = np.array(embeddings)
             # embedding_shape = [embeddings.shape[-1]]
@@ -120,7 +123,9 @@ class TextDataset(data.Dataset):
 
     def load_filenames(self, data_dir):
         filepath = os.path.join(data_dir, 'filenames.pickle')
-        with open(filepath, 'rb') as f:
+        print(filepath)
+    	filepath = '../data/coco/' + filepath
+    	with open(filepath, 'rb') as f:
             filenames = pickle.load(f)
         print('Load filenames from: %s (%d)' % (filepath, len(filenames)))
         return filenames
