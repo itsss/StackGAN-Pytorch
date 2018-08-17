@@ -1,4 +1,7 @@
-# StackGAN-pytorch
+# StackGAN-pytorch (2017학년도 겨울학기 인턴십)
+
+### 2018학년도 여름학기 인턴십 Github 리포지토리
+[2018학년도 여름학기 인턴십](https://github.com/itsss/DeepLearningInternship)
 
 ### Description
 - [Tensorflow implementation](https://github.com/hanzhanggit/StackGAN)
